@@ -1,0 +1,3 @@
+[submodule "ruby-client"]
+	path = ruby-client
+	url = git@github.com:voucherry/voucherry.git
