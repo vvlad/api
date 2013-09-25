@@ -1,6 +1,12 @@
-require File.expand_path("../voucherry/api",__FILE__)
-require File.expand_path("../voucherry/configuration",__FILE__)
-require File.expand_path("../voucherry/resource",__FILE__)
-require File.expand_path("../voucherry/account",__FILE__)
-require File.expand_path("../voucherry/reward",__FILE__)
-require File.expand_path("../voucherry/email_reward",__FILE__)
+
+module Voucherry
+end
+
+
+require 'voucherry/api'
+require 'voucherry/configuration'
+require 'voucherry/resource'
+require 'voucherry/account'
+require 'voucherry/reward'
+require 'voucherry/email_reward'
+

@@ -3,11 +3,11 @@ module Voucherry
   class Configuration
 
     attr_accessor :api_key,
-                  :hostname,
+                  :endpoint,
                   :verify_ssl
 
     def verify_ssl
-      hostname == "https://voucherry.com"
+      endpoint == "https://voucherry.com"
     end
 
   end

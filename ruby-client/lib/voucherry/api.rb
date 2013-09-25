@@ -7,7 +7,7 @@ module Voucherry
 
       def configure
         yield(config)
-        @default_client = self.new(config.api_key, config.hostname, {verify_ssl: config.verify_ssl})
+        @default_client = self.new(config.api_key, config.endpoint, {verify_ssl: config.verify_ssl})
       end
 
       def config
@@ -52,8 +52,8 @@ module Voucherry
 
     end
 
-    def initialize(api_key, hostname, options = {})
-      @connection = RestClient::Resource.new(hostname, {user: api_key, password: 'voucherry'}.merge(options))
+    def initialize(api_key, endpoint, options = {})
+      @connection = RestClient::Resource.new(endpoint, {user: api_key, password: 'voucherry'}.merge(options))
     end
 
     def connection
